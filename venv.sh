@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-python3 -m venv venv
-venv/bin/pip3 install tensorflow$1==1.5.0
-venv/bin/pip3 install cython
-venv/bin/pip3 install git+https://github.com/andersjo/dependency_decoding
+/usr/bin/python3 -m virtualenv venv -p /usr/bin/python3
+. venv/bin/activate
+pip install tensorflow$1==1.5.0
+pip install cython
+pip install git+https://github.com/andersjo/dependency_decoding
